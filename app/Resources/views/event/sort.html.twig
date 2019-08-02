@@ -1,10 +1,10 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-
+{% if events|length > 0 %}
+<h1>{{ events[0].type }}</h1>
 <div class="row">
-    {% if events > 0 %}
     {% for event in events %}
-    <div class="col-lg-3 col-md-6 col-sm-12 my-2">
+    <div class="col-lg-4 col-md-6 col-sm-12 my-2">
         <div class="card">
             <img class="card-img-top d-none d-sm-none d-md-block" src="{{ event.image }}">
             <div class="card-body">
@@ -24,6 +24,6 @@
         <h1>Sorry no events available right now</h1>
         <a class="btn btn-link" href="{{ path('event_index') }}"><i class="fa fa-arrow-left"></i></a>
     </div>
-    {% endif %}
 </div>
+{% endif %}
 {% endblock %}
