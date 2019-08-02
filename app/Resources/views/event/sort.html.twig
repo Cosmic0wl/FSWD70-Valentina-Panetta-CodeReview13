@@ -10,9 +10,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{ event.name }}</h5>
                 <p class="card-text">{{ event.type }}</p>
-                <p class="card-text">{{ event.address }}</p>
                 <p class="card-text">{% if event.date_time %}{{ event.date_time|date('Y-m-d') }}{% endif %}</p>
-                <p class="card-text">{% if event.date_time %}{{ event.date_time|date('H:i') }}{% endif %}</p>
                 <a href="{{ path('event_show', { 'id': event.id }) }}"><button class="btn btn-primary">show</button></a>
                 <a href="{{ path('event_edit', { 'id': event.id }) }}"><button class="btn btn-primary">edit</button></a>
             </div>
