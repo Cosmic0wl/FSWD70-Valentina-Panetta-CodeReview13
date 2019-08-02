@@ -1,0 +1,82 @@
+/* bootstrap overrides */
+.active {
+  background-color: #edb6b6 !important;
+  border-radius: 0.125rem;
+  color: #fdfafe !important;
+}
+/* color palette */
+
+.bg-pearl{
+    background: #fdfafe;
+}
+.bg-black{
+    background: #06061b;
+}
+.bg-ultra{
+    background: #232460;
+}
+.bg-purple{
+    background: #c467c0;
+}
+.bg-violet{
+    background: #5656c7;
+}
+.bg-blue{
+    background: #2d2c5a;
+}
+.bg-coral{
+    background: #f14f72;
+}
+.bg-pink{
+    background: #ee8bae;
+}
+.bg-cobalt{
+    background: #4d87f7;
+}
+
+/* text colors */
+
+.text-pearl {
+  color: #fdfafe;
+}
+.text-black {
+	color: #06061b;
+}
+.text-ultra {
+	color: #232460;
+}
+.text-purple{
+    color: #c467c0;
+}
+.text-violet{
+    color: #5656c7;
+}
+.text-blue{
+    color: #2d2c5a;
+}
+.text-coral{
+    color: #f14f72;
+}
+.text-pink{
+    color: #ee8bae;
+}
+.text-cobalt{
+    color: #4d87f7;
+}
+
+/* bootstrapoverrides */
+
+/* jumbotron background photo and override */
+
+.background-photo {
+  background-image: url('../img/bgm.jpg');
+  background-color: #ee8bae !important;
+  border-bottom: solid 0.2rem #232460;
+  color: #fdfafe;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60vh;
+  width: 100%;
+}
+
