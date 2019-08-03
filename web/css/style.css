@@ -1,14 +1,60 @@
 /* bootstrap overrides */
+.web {
+  text-decoration: none !important;
+  color: #5656c7 !important;
+}
+.web:hover {
+  color:  #c467c0 !important;
+} 
 .active {
-  background-color: #edb6b6 !important;
+  background-color: #4d87f7 !important;
   border-radius: 0.125rem;
   color: #fdfafe !important;
 }
+
+.active .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show .nav-link {
+  color: #fdfafe !important;
+}
+.navbar-brand, .nav-link {
+  color: #fdfafe !important;
+}
+
 
 .container-fluid {
   padding-right: 0px !important;
   padding-left: 0px !important;
 }
+
+.btn-link {
+  color: #5656c7 !important;
+}
+
+.btn-link:hover {
+  color:  #c467c0 !important;
+} 
+
+.btn-primary {
+  background-color: #5656c7 !important;
+  border-color: #5656c7 !important;
+}
+
+.btn-primary:hover {
+  background-color: #c467c0 !important;
+  border-color: #c467c0 !important;
+}
+
+/* font */
+
+.righteous {
+  font-family: 'Righteous', sans-serif;
+}
+
+.r-shadow {
+  font-family: 'Righteous', sans-serif;
+  text-shadow: 0.15rem 0.15rem #4d87f7;
+}
+
+
 /* color palette */
 
 .bg-pearl{

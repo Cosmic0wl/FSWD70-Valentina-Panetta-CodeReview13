@@ -1,68 +1,28 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Event</h1>
 
-    <table>
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ event.id }}</td>
-            </tr>
-            <tr>
-                <th>Name</th>
-                <td>{{ event.name }}</td>
-            </tr>
-            <tr>
-                <th>Image</th>
-                <td>{{ event.image }}</td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>{{ event.description }}</td>
-            </tr>
-            <tr>
-                <th>Type</th>
-                <td>{{ event.type }}</td>
-            </tr>
-            <tr>
-                <th>Address</th>
-                <td>{{ event.address }}</td>
-            </tr>
-            <tr>
-                <th>Email</th>
-                <td>{{ event.email }}</td>
-            </tr>
-            <tr>
-                <th>Phonenumber</th>
-                <td>{{ event.phoneNumber }}</td>
-            </tr>
-            <tr>
-                <th>Website</th>
-                <a href="{{ event.website }}">Website</a>
-            </tr>
-            <tr>
-                <th>Capacity</th>
-                <td>{{ event.capacity }}</td>
-            </tr>
-            <tr>
-                <th>Datetime</th>
-                <td>{% if event.dateTime %}{{ event.dateTime|date('Y-m-d H:i:s') }}{% endif %}</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <ul>
-        <li>
-            <a href="{{ path('event_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('event_edit', { 'id': event.id }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
+<div class='row d-flex justify-content-center align-items-start p-4'>
+    <div class='col-lg-6 col-md-6 col-sm-12 my-3'>
+    <img class='img-fluid' src='{{ event.image }}'>
+    </div>
+    <div class='col-lg-6 col-md-6 col-sm-12 my-3'>
+            <h5 class='righteous text-pink'>{{ event.name }}</h5>
+            <p>{{ event.description }}</p>
+            <p><i class="fa fa-star text-coral"></i> {{ event.type }}</p>
+            <p><i class="fa fa-home text-coral"></i> {{ event.address }}</p>
+            <p><i class="fa fa-envelope text-coral"></i> {{ event.email }}</p>
+            <p><i class="fa fa-phone text-coral"></i> {{ event.phoneNumber }}</p>
+            <p><i class="fa fa-laptop text-coral"></i> <a class="web" href="{{ event.website }}">Website</a></p>
+            <p><i class="fa fa-users text-coral"></i> Capacity: {{ event.capacity }}</p>
+            <p><i class="fa fa-calendar text-coral"></i> {% if event.dateTime %}{{ event.dateTime|date('Y-m-d H:i') }}{% endif %}</p>
+            <div class="d-flex">
+            <a class="btn btn-primary mr-4" href="{{ path('event_edit', { 'id': event.id }) }}">Edit</a>
+             {{ form_start(delete_form) }}
+                <input class="btn btn-primary" type="submit" value="Delete">
             {{ form_end(delete_form) }}
-        </li>
-    </ul>
+        </div>
+        </div>
+        <a class="btn btn-link" href="{{ path('event_index') }}"><i class="fa fa-arrow-left fa-2x"></i></a>
+    </div>
 {% endblock %}

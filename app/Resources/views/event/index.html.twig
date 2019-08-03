@@ -1,26 +1,22 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-<h1>Events list</h1>
-<div class="row">
-{% for event in events %}
-<div class="col-lg-4 col-md-6 col-sm-12 my-2">
-    <div class="card">
-        <img class="card-img-top d-none d-sm-none d-md-block" src="{{ event.image }}">
-        <div class="card-body">
-            <h5 class="card-title">{{ event.name }}</h5>
-           <!--  <p class="card-text">{{ event.description }}</p> -->
-            <p class="card-text">{{ event.type }}</p>
-            <!-- <p class="card-text">{{ event.address }}</p> -->
-<!--             <p class="card-text">{{ event.email }}</p>
-            <p class="card-text">{{ event.phoneNumber }}</p>
-            <p class="card-text">{{ event.website }}</p>
-            <p class="card-text">{{ event.capacity }}</p> -->
-            <p class="card-text">{% if event.dateTime  %}{{ event.dateTime|date('Y-m-d') }}{% endif %}</p>
-            <a href="{{ path('event_show', { 'id': event.id }) }}"><button class="btn btn-primary">show</button></a>
-            <a href="{{ path('event_edit', { 'id': event.id }) }}"><button class="btn btn-primary">edit</button></a>
+<div class="row d-flex justify-content-center">
+<h1 class="display-4 text-cobalt righteous">Events</h1>
+</div>
+<div class="row p-5">
+    {% for event in events %}
+    <div class="col-lg-4 col-md-6 col-sm-12 my-2">
+        <div class="card">
+            <img class="card-img-top d-none d-sm-none d-md-block" src="{{ event.image }}">
+            <div class="card-body">
+                <h5 class="card-title text-cobalt">{{ event.name }}</h5>
+                <p class="card-text"><i class="fa fa-star text-coral"></i> {{ event.type }}</p>
+                <p class="card-text"><i class="fa fa-calendar text-coral"></i> {% if event.dateTime %}{{ event.dateTime|date('Y-m-d') }}{% endif %}</p>
+                <a href="{{ path('event_show', { 'id': event.id }) }}"><button class="btn btn-primary">show</button></a>
+                <a href="{{ path('event_edit', { 'id': event.id }) }}"><button class="btn btn-primary">edit</button></a>
+            </div>
         </div>
     </div>
-</div>
-{% endfor %}
+    {% endfor %}
 </div>
 {% endblock %}
