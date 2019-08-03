@@ -17,9 +17,9 @@
             <p><i class="fa fa-users text-coral"></i> Capacity: {{ event.capacity }}</p>
             <p><i class="fa fa-calendar text-coral"></i> {% if event.dateTime %}{{ event.dateTime|date('Y-m-d H:i') }}{% endif %}</p>
             <div class="d-flex">
-            <a class="btn btn-primary mr-4" href="{{ path('event_edit', { 'id': event.id }) }}">Edit</a>
+            <a class="btn btn-primary mr-4" href="{{ path('event_edit', { 'id': event.id }) }}">edit</a>
              {{ form_start(delete_form) }}
-                <input class="btn btn-primary" type="submit" value="Delete">
+                <input class="btn btn-primary" type="submit" value="delete">
             {{ form_end(delete_form) }}
         </div>
         </div>

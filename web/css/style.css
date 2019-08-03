@@ -1,4 +1,5 @@
 /* bootstrap overrides */
+
 .web {
   text-decoration: none !important;
   color: #5656c7 !important;
@@ -18,7 +19,6 @@
 .navbar-brand, .nav-link {
   color: #fdfafe !important;
 }
-
 
 .container-fluid {
   padding-right: 0px !important;
@@ -51,6 +51,7 @@
 
 .r-shadow {
   font-family: 'Righteous', sans-serif;
+  color: #fdfafe;
   text-shadow: 0.15rem 0.15rem #4d87f7;
 }
 
@@ -115,19 +116,4 @@
     color: #4d87f7;
 }
 
-/* bootstrapoverrides */
-
-/* jumbotron background photo and override */
-
-.background-photo {
-  background-image: url('../img/bgm.jpg');
-  background-color: #ee8bae !important;
-  border-bottom: solid 0.2rem #232460;
-  color: #fdfafe;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 60vh;
-  width: 100%;
-}
 

@@ -1,16 +1,16 @@
 {% extends 'base.html.twig' %}
 {% form_theme form 'bootstrap_4_layout.html.twig' %}
 {% block body %}
-<div class="row mt-3 d-flex justify-content-center">
-	<h1 class="display-4 text-cobalt righteous">Create Event</h1>
+<div class="row d-flex justify-content-center bg-pink">
+	<h1 class="display-4 r-shadow">Create Event</h1>
 </div>
 <div class="row p-5 d-flex align-items-center">
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         {{ form_start(form) }}
         {{ form_widget(form) }}
-        <input type="submit" class="btn btn-primary" value="Create" />
+        <input type="submit" class="btn btn-lg btn-block btn-primary" value="create" />
         {{ form_end(form) }}
-        <a class="btn btn-link" href="{{ path('event_index') }}"><i class="fa fa-arrow-left fa-2x"></i></a>
+        <a class="btn btn-link mt-4" href="{{ path('event_index') }}"><i class="fa fa-arrow-left fa-2x"></i></a>
     </div>
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
         <img class="img-fluid" src="/img/venus.png">
